@@ -1,0 +1,51 @@
+{
+  "name": "react-express-app",
+  "version": "1.0.0",
+  "description": "Summery: This is a Trello replica project. The main motivation behind building thsi project was to get familiar with webpack and babel. If you want to know about the webpack and it's cli command do check out the webpack.config.js file where I have elaborated each line with comments. This is the MVP and your any kind of help will be appriciated.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "production": "webpack --config webpack.config.js -p",
+    "test-connect": "babel-node src/server/connect-db",
+    "dev-server": "nodemon --exec babel-node src/server/server",
+    "start-dev": "concurrently \"npm run dev-server\" \" npm run start \" "
+  },
+  "keywords": [],
+  "author": "Vishav",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "babel-loader": "^8.0.6",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.6.4",
+    "morgan": "^1.9.1",
+    "node-libs-browser": "^2.2.1",
+    "redux-logger": "^3.0.6",
+    "strip-loader": "^0.1.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "uuid": "^3.3.2",
+    "webpack": "^4.35.3"
+  }
+}
