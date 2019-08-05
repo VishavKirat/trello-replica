@@ -66,8 +66,8 @@ class TaskDetails extends React.Component{
 }
 const mapStateToProps = (state,ownProps)=>{
     let id = ownProps.match.params.id
-
-    let task = state.tasks.find(task=> task.id === id)
+    let task = state.tasks.find(task=> task._id === id)
+    console.log(task)
     return ({
         id: id,
         task : task ,

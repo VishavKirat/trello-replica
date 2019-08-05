@@ -3,9 +3,13 @@ import {connect} from 'react-redux'
 import Dashboard from '../Dashboard'
 import {withRouter} from 'react-router-dom'
 import axios from 'axios'
+import {requestAddNewTask,requestGetAllTasks} from '../../ReduxStore/Actions'
 //  import {taskRequestApi} from '../../ReduxStore/Actions/RequestApi'
 class App extends React.Component{
-    
+
+    componentDidMount(){
+        return this.props.displayAlltasks()
+    }
     render(){
         return (
             <div className="App">
@@ -20,8 +24,13 @@ class App extends React.Component{
 }
 const mapStateToProps = ({groups})=>{
     return ({
-        groups: groups
+        groups: groups,
+        
     })
 }
-
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = (dispatch)=>{
+    return ({
+        displayAlltasks :() => dispatch(requestGetAllTasks())
+    })
+}
+export default connect(mapStateToProps,mapDispatchToProps)(App);

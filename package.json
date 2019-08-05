@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Summery: This is a Trello replica project. The main motivation behind building thsi project was to get familiar with webpack and babel. If you want to know about the webpack and it's cli command do check out the webpack.config.js file where I have elaborated each line with comments. This is the MVP and your any kind of help will be appriciated.",
   "main": "index.js",
+  "proxy":"http:/localhost:7777/api",
   "scripts": {
     "start": "webpack-dev-server",
     "production": "webpack --config webpack.config.js -p",

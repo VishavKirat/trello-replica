@@ -4,6 +4,12 @@ import {initState} from '../../../server/initState'
 import {TYPES} from '../Actions'
 import {tasks} from './TaskReducer'
 
+// const initState = {
+//     groups:[],
+//     comments:[],
+//     users:[],
+//     session:[]
+// }
 
 export const rootReducer = combineReducers({
     groups: (groups = initState.groups,action)=>{
